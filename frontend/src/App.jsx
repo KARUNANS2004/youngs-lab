@@ -14,7 +14,7 @@ const App = () => {
       return;
     }
     try {
-      const response = await axios.get(`${url}/api/greeting?name=${name}`);
+      const response = await axios.get(`${url}/api/greet?name=${name}`);
       setMessage(response.data.message || response.data.error);
     } catch (error) {
       setMessage("Error fetching greeting.");

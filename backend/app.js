@@ -5,7 +5,7 @@ const PORT = 5000;
 
 app.use(cors())
 
-app.get("/api/greeting",(req,res)=>{
+app.get("/api/greet",(req,res)=>{
     const name=req.query.name
     if(!name){
         return res.json({error:"Name is requried"});
