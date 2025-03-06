@@ -22,8 +22,8 @@ const App = () => {
   };
 
   return (
-    <div>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-4">
+    <div className="h-screen w-screen flex items-center justify-center bg-gray-900">
+      <div className="flex flex-col items-center justify-center  text-white p-4">
         <h1 className="text-3xl font-bold mb-4">Greeting App</h1>
         <input
           type="text"
@@ -38,7 +38,11 @@ const App = () => {
         >
           Get Greeting
         </button>
-        {message && <p className="mt-4 text-lg">{message}</p>}
+        {message && (
+          <p className="mt-4 text-2xl font-serif font-semibold absolute top-10 left-0 w-full flex items-center justify-center">
+            {message}
+          </p>
+        )}
       </div>
     </div>
   );
