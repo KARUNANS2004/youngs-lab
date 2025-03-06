@@ -6,15 +6,15 @@ const App = () => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
 
+  const url = "https://youngs-lab.onrender.com";
+
   const fetchGreeting = async () => {
     if (!name) {
       setMessage("Name is required.");
       return;
     }
     try {
-      const response = await axios.get(
-        `http://localhost:5000/api/greeting?name=${name}`
-      );
+      const response = await axios.get(`${url}/api/greeting?name=${name}`);
       setMessage(response.data.message || response.data.error);
     } catch (error) {
       setMessage("Error fetching greeting.");
